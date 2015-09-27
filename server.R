@@ -13,21 +13,18 @@ shinyServer(
                         
                 })
         
-                # Generate a plot of the data. Also uses the inputs to build the 
-                # plot label. Note that the dependencies on both the inputs and
-                # the 'data' reactive expression are both tracked, and all expressions 
-                # are called in the sequence implied by the dependency graph
+                # Generate a plot of the data.
                 output$plot <- renderPlot({
                         dataset <- data()
                         
                         ggplot(dataset, 
                                aes(x = conc, y = rate, colour = state)) + 
-                                geom_point(size = 3)
-                        #hist(data(), 
-                        #     main=paste('r', dist, '(', n, ')', sep=''))
+                                geom_point(size = 3) + 
+                                xlab("Substrate concentration (ppm)") +
+                                ylab("Reaction velocity (counts/min/min)")
                 })
                 
-                # Show information of the data
+                # Show summary of the data
                 output$sum <- renderPrint({
                         summary(Puromycin)
                 })

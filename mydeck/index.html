@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project Pitch</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Project Pitch">
+  <meta name="author" content="Silvia Bahmann">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Project Pitch</h1>
+    <h2>Developing Data Products</h2>
+    <p>Silvia Bahmann<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>The Puromycin dataset</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>holds data on the velocity of an enzymatic reaction with and without Puromycin</li>
+<li>was measured by Treloar in 1974 [1]</li>
+</ul>
+
+<pre><code class="r">str(Puromycin)
+</code></pre>
+
+<pre><code>## &#39;data.frame&#39;:    23 obs. of  3 variables:
+##  $ conc : num  0.02 0.02 0.06 0.06 0.11 0.11 0.22 0.22 0.56 0.56 ...
+##  $ rate : num  76 47 97 107 123 139 159 152 191 201 ...
+##  $ state: Factor w/ 2 levels &quot;treated&quot;,&quot;untreated&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  - attr(*, &quot;reference&quot;)= chr &quot;A1.3, p. 269&quot;
+</code></pre>
+
+<p>[1] Treloar, M. A. (1974), Effects of Puromycin on Galactosyltransferase in Golgi Membranes, M.Sc. Thesis, U. of Toronto.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>The shiny app</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>A shiny app was created that allows some insight into the Puromycin dataset. It is available on shinyapps.io:</p>
+
+<p><a href="https://silviabahmann.shinyapps.io/DataProductsProject">Shiny app</a></p>
+
+<p><img src="./screenshot.png" width = "900"/></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Plot tab</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The user may choose the category of the data (&quot;treated&quot;, &quot;untreated&quot;, &quot;both&quot;) which changes the data points shown in the plot.</p>
+
+<p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Information tab</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Furthermore, there is a tab with some more information on the Puromycin dataset including a summary of the dataset.</p>
+
+<pre><code class="r">summary(Puromycin)
+</code></pre>
+
+<pre><code>##       conc             rate             state   
+##  Min.   :0.0200   Min.   : 47.0   treated  :12  
+##  1st Qu.:0.0600   1st Qu.: 91.5   untreated:11  
+##  Median :0.1100   Median :124.0                 
+##  Mean   :0.3122   Mean   :126.8                 
+##  3rd Qu.:0.5600   3rd Qu.:158.5                 
+##  Max.   :1.1000   Max.   :207.0
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='The Puromycin dataset'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='The shiny app'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Plot tab'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Information tab'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
